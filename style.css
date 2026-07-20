@@ -1,0 +1,248 @@
+  :root{
+    --ink:#1a1a17;
+    --ink-2:#3a3a34;
+    --stone:#6b6a62;
+    --paper:#f4f2ec;
+    --paper-2:#ece9e0;
+    --line:#cbc7bb;
+    --slate:#2b3538;
+    --slate-2:#3d4a4d;
+    --gold:#a8843e;
+    --gold-2:#c19a4c;
+    --white:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Hiragino Mincho ProN","Yu Mincho",'YuMincho',serif;
+    color:var(--ink);background:var(--paper);line-height:1.9;
+    -webkit-font-smoothing:antialiased;letter-spacing:.02em;
+  }
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(244,242,236,.94);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;flex-direction:column;line-height:1.15;text-decoration:none;color:inherit}
+  .brand .mark{font-size:1.28rem;font-weight:700;letter-spacing:.12em}
+  .brand .sub{font-size:.6rem;letter-spacing:.3em;color:var(--stone)}
+  .menu{display:flex;gap:30px;list-style:none}
+  .menu a{font-family:"Hiragino Kaku Gothic ProN",sans-serif;text-decoration:none;color:var(--ink-2);font-size:.82rem;letter-spacing:.1em;position:relative;padding:6px 0}
+  .menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .35s}
+  .menu a:hover::after{width:100%}
+  .navtel{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.88rem;letter-spacing:.06em;color:var(--white);background:var(--slate);font-weight:700;padding:10px 20px;text-decoration:none;transition:.3s}
+  .navtel:hover{background:var(--gold)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+  .burger span{width:26px;height:2px;background:var(--ink);transition:.3s}
+
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;background:linear-gradient(180deg,#1e2628 0%,#2b3538 58%,#374446 100%);overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.014) 0 2px,transparent 2px 26px),radial-gradient(ellipse at 74% 28%,rgba(168,132,62,.15),transparent 55%);pointer-events:none}
+  .strata{position:absolute;left:0;right:0;bottom:0;height:40%;opacity:.5}
+  .strata span{display:block;width:100%;border-top:1px solid rgba(255,255,255,.06)}
+  .strata span:nth-child(1){height:14%;background:rgba(255,255,255,.015)}
+  .strata span:nth-child(2){height:22%;background:rgba(255,255,255,.03)}
+  .strata span:nth-child(3){height:26%;background:rgba(255,255,255,.05)}
+  .strata span:nth-child(4){height:38%;background:rgba(255,255,255,.07)}
+  .hero-inner{position:relative;z-index:2;color:var(--paper);padding-top:74px}
+  .eyebrow{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.72rem;letter-spacing:.4em;color:var(--gold-2);margin-bottom:28px;opacity:0;transform:translateY(14px);animation:rise .9s .2s forwards}
+  .hero h1{font-size:clamp(2.3rem,5.6vw,4.3rem);font-weight:700;line-height:1.34;letter-spacing:.05em;margin-bottom:30px}
+  .hero h1 .l{display:block;opacity:0;transform:translateY(24px)}
+  .hero h1 .l:nth-child(1){animation:rise 1s .35s forwards}
+  .hero h1 .l:nth-child(2){animation:rise 1s .55s forwards}
+  .hero h1 .accent{color:var(--gold-2)}
+  .hero p{font-size:1.02rem;max-width:36em;color:rgba(244,242,236,.84);line-height:2.1;margin-bottom:24px;opacity:0;transform:translateY(16px);animation:rise 1s .8s forwards}
+  .hero .target{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.82rem;letter-spacing:.08em;color:rgba(244,242,236,.6);margin-bottom:40px;opacity:0;animation:rise 1s .9s forwards}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:rise 1s 1.05s forwards}
+  .btn{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:inline-flex;align-items:center;gap:10px;font-size:.86rem;letter-spacing:.12em;text-decoration:none;padding:16px 32px;transition:.35s}
+  .btn-solid{background:var(--gold);color:#241b06;font-weight:700}
+  .btn-solid:hover{background:var(--gold-2);transform:translateY(-2px)}
+  .btn-line{border:1px solid rgba(244,242,236,.5);color:var(--paper)}
+  .btn-line:hover{background:rgba(244,242,236,.1);border-color:var(--paper)}
+  @keyframes rise{to{opacity:1;transform:translateY(0)}}
+
+  section{padding:110px 0}
+  .lead{margin-bottom:56px}
+  .lead .num{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.7rem;letter-spacing:.4em;color:var(--gold);display:block;margin-bottom:14px}
+  .lead h2{font-size:clamp(1.8rem,3.4vw,2.5rem);font-weight:700;letter-spacing:.06em;line-height:1.5}
+  .lead .en{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.68rem;letter-spacing:.32em;color:var(--stone);margin-top:12px;display:block}
+  .lead.center{text-align:center}
+
+  .problems{background:var(--slate);color:var(--paper)}
+  .problems .lead h2{color:var(--paper)}
+  .problems .lead .en{color:rgba(244,242,236,.5)}
+  .prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1)}
+  .pcard{background:var(--slate);padding:38px 40px;display:flex;gap:20px;align-items:flex-start}
+  .pcard .ic{flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:rgba(168,132,62,.18);color:var(--gold-2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:700;font-family:"Hiragino Kaku Gothic ProN",sans-serif}
+  .pcard h3{font-size:1.1rem;font-weight:700;letter-spacing:.04em;margin-bottom:10px;line-height:1.6}
+  .pcard p{font-size:.9rem;line-height:1.95;color:rgba(244,242,236,.72)}
+  .prob-foot{text-align:center;margin-top:40px;font-size:1.05rem;letter-spacing:.06em;color:var(--gold-2)}
+
+  .reasons{background:var(--paper)}
+  .r-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+  .rcard{background:var(--white);border:1px solid var(--line);padding:44px 34px;position:relative;transition:.4s}
+  .rcard:hover{border-color:var(--gold);transform:translateY(-4px)}
+  .rcard .rn{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:2.6rem;font-weight:700;color:var(--paper-2);line-height:1;position:absolute;top:26px;right:28px}
+  .rcard .ic{font-size:1.8rem;margin-bottom:20px;color:var(--gold)}
+  .rcard h3{font-size:1.24rem;font-weight:700;letter-spacing:.04em;margin-bottom:16px;line-height:1.6;position:relative;z-index:2}
+  .rcard p{font-size:.93rem;color:var(--ink-2);line-height:2.05}
+
+  .compare{background:var(--paper-2)}
+  .cmp-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line)}
+  .cmp-table th,.cmp-table td{padding:22px 24px;text-align:left;border-bottom:1px solid var(--line);font-size:.96rem;vertical-align:top;line-height:1.8}
+  .cmp-table thead th{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.86rem;letter-spacing:.08em}
+  .cmp-table thead .us{background:var(--slate);color:var(--paper);font-weight:700}
+  .cmp-table thead .them{background:var(--paper-2);color:var(--stone)}
+  .cmp-table thead .item{width:22%;background:var(--white)}
+  .cmp-table .rowlabel{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-weight:700;font-size:.9rem;color:var(--slate);letter-spacing:.04em;width:22%}
+  .cmp-table .them-cell{color:var(--stone);width:39%}
+  .cmp-table .us-cell{width:39%;background:rgba(168,132,62,.06);color:var(--ink)}
+  .cmp-table .us-cell strong{color:var(--slate)}
+  .cmp-table tr:last-child th,.cmp-table tr:last-child td{border-bottom:none}
+
+  .why{background:var(--slate);color:var(--paper)}
+  .why .lead h2{color:var(--paper)}
+  .why .lead .en{color:rgba(244,242,236,.5)}
+  .why-intro{font-size:1.05rem;color:rgba(244,242,236,.82);max-width:40em;line-height:2.1;margin-bottom:52px}
+  .why-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .wstep{position:relative;padding:0 28px}
+  .wstep:not(:last-child){border-right:1px solid rgba(255,255,255,.14)}
+  .wstep .wn{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.72rem;letter-spacing:.3em;color:var(--gold-2);margin-bottom:18px;display:block}
+  .wstep h3{font-size:1.16rem;font-weight:700;letter-spacing:.04em;margin-bottom:16px;line-height:1.6}
+  .wstep p{font-size:.92rem;color:rgba(244,242,236,.74);line-height:2.05}
+  .why-note{margin-top:48px;padding:26px 30px;background:rgba(168,132,62,.14);border-left:3px solid var(--gold);font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.98rem;letter-spacing:.04em;color:var(--paper);line-height:1.9}
+
+  .products{background:var(--paper)}
+  .prod-group{margin-bottom:44px}
+  .prod-group:last-of-type{margin-bottom:0}
+  .prod-group h3{font-size:1.14rem;font-weight:700;letter-spacing:.06em;margin-bottom:22px;padding-bottom:12px;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:14px}
+  .prod-group h3 .en{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.64rem;letter-spacing:.22em;color:var(--gold);font-weight:400}
+  .prod-tags{display:flex;flex-wrap:wrap;gap:11px}
+  .prod-tags span{font-family:"Hiragino Kaku Gothic ProN",sans-serif;background:var(--white);border:1px solid var(--line);padding:10px 17px;font-size:.85rem;letter-spacing:.04em;color:var(--ink-2);transition:.3s}
+  .prod-tags span:hover{border-color:var(--gold);color:var(--slate)}
+  .prod-note{font-family:"Hiragino Kaku Gothic ProN",sans-serif;margin-top:40px;padding:22px 26px;background:var(--paper-2);border-left:3px solid var(--gold);font-size:.9rem;color:var(--ink-2);line-height:1.9;letter-spacing:.04em}
+
+  .voice{background:var(--paper-2)}
+  .voice-card{background:var(--white);border:1px solid var(--line);padding:52px 56px;max-width:820px;margin:0 auto;position:relative}
+  .voice-card::before{content:"“";font-family:Georgia,serif;font-size:5rem;color:var(--gold);opacity:.35;position:absolute;top:20px;left:34px;line-height:1}
+  .voice-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:32px;position:relative;z-index:2}
+  .vstep .vn{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.68rem;letter-spacing:.24em;color:var(--gold);margin-bottom:12px;display:block}
+  .vstep h4{font-size:.98rem;font-weight:700;letter-spacing:.04em;margin-bottom:10px}
+  .vstep p{font-size:.86rem;color:var(--ink-2);line-height:1.95}
+  .voice-quote{border-top:1px solid var(--line);padding-top:26px;font-size:1.14rem;font-weight:700;color:var(--slate);letter-spacing:.04em;line-height:1.8}
+  .voice-by{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.82rem;color:var(--stone);margin-top:14px;letter-spacing:.06em}
+
+  .company{background:var(--slate);color:var(--paper)}
+  .company .lead h2{color:var(--paper)}
+  .company .lead .en{color:rgba(244,242,236,.5)}
+  .co-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);margin-bottom:56px}
+  .co-stat{background:var(--slate);padding:34px 24px;text-align:center}
+  .co-stat .v{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:2.2rem;font-weight:700;color:var(--gold-2);line-height:1.2}
+  .co-stat .k{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.78rem;letter-spacing:.14em;color:rgba(244,242,236,.7);margin-top:8px}
+  .co-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:start}
+  .co-table{width:100%;border-collapse:collapse}
+  .co-table th,.co-table td{text-align:left;padding:18px 4px;border-bottom:1px solid rgba(255,255,255,.14);font-size:.92rem;vertical-align:top}
+  .co-table th{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-weight:400;letter-spacing:.14em;color:var(--gold-2);width:32%;font-size:.8rem;padding-top:21px}
+  .co-table td{color:rgba(244,242,236,.9);line-height:1.9}
+  .co-map{aspect-ratio:1/1;border:1px solid rgba(255,255,255,.16)}
+  .co-map iframe{width:100%;height:100%;filter:grayscale(.3) contrast(.95);border:0}
+
+  .contact{background:var(--paper);text-align:center}
+  .contact h2{font-size:clamp(1.8rem,3.8vw,2.6rem);font-weight:700;letter-spacing:.06em;margin-bottom:20px;line-height:1.6}
+  .contact .ask{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:inline-block;background:var(--paper-2);padding:12px 26px;font-size:.9rem;letter-spacing:.06em;color:var(--slate);margin-bottom:30px}
+  .contact p{color:var(--ink-2);font-size:1rem;max-width:34em;margin:0 auto 44px;line-height:2.1}
+  .tel-block{display:flex;gap:56px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+  .tel-item .tl{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.72rem;letter-spacing:.24em;color:var(--stone);margin-bottom:8px}
+  .tel-item .tn{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:1.9rem;font-weight:700;color:var(--slate);letter-spacing:.03em;text-decoration:none}
+  .tel-item .tn:hover{color:var(--gold)}
+  .fax-note{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.82rem;color:var(--stone);letter-spacing:.06em}
+
+  footer{background:var(--ink);color:rgba(244,242,236,.7);padding:56px 0 28px}
+  .foot-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot-brand .mark{font-size:1.2rem;font-weight:700;letter-spacing:.12em;color:var(--paper);margin-bottom:4px}
+  .foot-brand .mark2{font-size:.9rem;color:rgba(244,242,236,.6);margin-bottom:10px}
+  .foot-brand .adr{font-size:.82rem;line-height:1.9}
+  .foot-nav{display:flex;gap:26px;flex-wrap:wrap}
+  .foot-nav a{font-family:"Hiragino Kaku Gothic ProN",sans-serif;color:rgba(244,242,236,.7);text-decoration:none;font-size:.8rem;letter-spacing:.08em}
+  .foot-nav a:hover{color:var(--gold-2)}
+  .copy{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.72rem;letter-spacing:.1em;color:rgba(244,242,236,.4);margin-top:24px}
+
+  /* ---------- movie ---------- */
+  .movie{background:var(--paper)}
+  .movie-lead-note{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.92rem;color:var(--ink-2);line-height:2;max-width:40em;margin-bottom:44px}
+  .movie-grid{display:grid;grid-template-columns:2fr 1fr;gap:26px}
+  .movie-main .vframe{aspect-ratio:16/9}
+  .movie-side{display:flex;flex-direction:column;gap:26px}
+  .movie-side .vframe{aspect-ratio:16/9}
+  .movie-side-card{background:var(--slate);color:var(--paper);padding:34px 30px;display:flex;flex-direction:column;justify-content:center;flex:1}
+  .movie-side-card h3{font-size:1.2rem;font-weight:700;letter-spacing:.06em;margin-bottom:16px}
+  .movie-side-card p{font-size:.92rem;line-height:2;color:rgba(244,242,236,.8);margin-bottom:22px}
+  .movie-side-card .side-tel{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:1.24rem;font-weight:700;color:var(--gold-2);text-decoration:none;letter-spacing:.04em}
+  .movie-side-card .side-tel:hover{color:var(--paper)}
+  .vframe{position:relative;width:100%;background:#0d1113;border:1px solid var(--line);overflow:hidden}
+  .vframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  /* placeholder shown until real embed URL is set */
+  .vframe.placeholder{display:flex;align-items:center;justify-content:center;background:linear-gradient(150deg,#243033,#2b3538)}
+  .vframe.placeholder .ph{text-align:center;color:rgba(244,242,236,.5);font-family:"Hiragino Kaku Gothic ProN",sans-serif;padding:20px}
+  .vframe.placeholder .ph .play{width:56px;height:56px;border-radius:50%;border:2px solid rgba(244,242,236,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.2rem;color:rgba(244,242,236,.6)}
+  .vframe.placeholder .ph small{font-size:.72rem;letter-spacing:.1em;display:block;margin-top:8px;color:rgba(244,242,236,.35)}
+  .movie-cta{margin-top:38px;text-align:center}
+  .yt-link{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:inline-flex;align-items:center;gap:10px;font-size:.86rem;letter-spacing:.08em;text-decoration:none;color:var(--white);background:#c4302b;padding:14px 30px;transition:.3s}
+  .yt-link:hover{background:#a82722}
+
+  /* ---------- form ---------- */
+  .form{background:var(--paper-2)}
+  .form-wrap{max-width:760px;margin:0 auto}
+  .form-intro{text-align:center;font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.94rem;color:var(--ink-2);line-height:2;margin-bottom:40px}
+  .kform{background:var(--white);border:1px solid var(--line);padding:44px 46px}
+  .frow{margin-bottom:24px}
+  .frow:last-of-type{margin-bottom:0}
+  .frow label{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:block;font-size:.86rem;font-weight:700;letter-spacing:.06em;color:var(--slate);margin-bottom:10px}
+  .frow label .req{color:#c4302b;font-size:.72rem;margin-left:8px;font-weight:400}
+  .frow label .opt{color:var(--stone);font-size:.72rem;margin-left:8px;font-weight:400}
+  .kform input[type=text],.kform input[type=tel],.kform input[type=email],.kform input[type=date],.kform textarea,.kform select{font-family:"Hiragino Kaku Gothic ProN",sans-serif;width:100%;padding:13px 15px;border:1px solid var(--line);background:var(--paper);font-size:.95rem;color:var(--ink);transition:.25s}
+  .kform input:focus,.kform textarea:focus,.kform select:focus{outline:none;border-color:var(--gold);background:var(--white)}
+  .kform textarea{resize:vertical;min-height:110px;line-height:1.8}
+  .radio-row{display:flex;flex-wrap:wrap;gap:12px}
+  .radio-row label{font-weight:400;font-size:.9rem;display:flex;align-items:center;gap:7px;margin-bottom:0;cursor:pointer;background:var(--paper);border:1px solid var(--line);padding:10px 16px;transition:.25s}
+  .radio-row label:hover{border-color:var(--gold)}
+  .radio-row input{accent-color:var(--gold)}
+  .fsubmit{text-align:center;margin-top:34px}
+  .fsubmit button{font-family:"Hiragino Kaku Gothic ProN",sans-serif;background:var(--slate);color:var(--paper);border:none;padding:17px 56px;font-size:.94rem;font-weight:700;letter-spacing:.14em;cursor:pointer;transition:.3s}
+  .fsubmit button:hover{background:var(--gold);color:#241b06}
+  .form-alt{text-align:center;margin-top:30px;font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.86rem;color:var(--stone);line-height:1.9}
+  .form-alt a{color:var(--slate);font-weight:700;text-decoration:none;border-bottom:1px solid var(--gold)}
+  .form-notice{margin-top:16px;padding:14px 18px;background:rgba(168,132,62,.1);border-left:3px solid var(--gold);font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.8rem;color:var(--ink-2);line-height:1.8}
+
+  .form-success{background:var(--white);border:1px solid var(--gold);border-top:4px solid var(--gold);padding:52px 46px;text-align:center}
+  .form-success .fs-icon{width:64px;height:64px;border-radius:50%;background:rgba(168,132,62,.14);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:700;margin:0 auto 22px}
+  .form-success h3{font-size:1.5rem;font-weight:700;letter-spacing:.06em;color:var(--slate);margin-bottom:16px;line-height:1.6}
+  .form-success p{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.94rem;color:var(--ink-2);line-height:2;max-width:34em;margin:0 auto}
+  .form-success a{color:var(--slate);font-weight:700;text-decoration:none;border-bottom:1px solid var(--gold)}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+  .reveal.in{opacity:1;transform:translateY(0)}
+
+  @media(max-width:880px){
+    .menu,.navtel{display:none}
+    .burger{display:flex}
+    .prob-grid{grid-template-columns:1fr}
+    .r-grid{grid-template-columns:1fr;gap:24px}
+    .why-flow{grid-template-columns:1fr}
+    .wstep{padding:28px 0}
+    .wstep:not(:last-child){border-right:none;border-bottom:1px solid rgba(255,255,255,.14)}
+    .voice-steps{grid-template-columns:1fr;gap:22px}
+    .voice-card{padding:40px 30px}
+    .co-grid{grid-template-columns:1fr;gap:38px}
+    .co-stats{grid-template-columns:1fr}
+    .movie-grid{grid-template-columns:1fr}
+    .kform{padding:32px 24px}
+    section{padding:78px 0}
+    .cmp-table th,.cmp-table td{padding:16px 14px;font-size:.86rem}
+    .tel-block{gap:30px}
+  }
+  .mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;z-index:99;background:var(--slate);flex-direction:column;padding:18px 28px 28px}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{font-family:"Hiragino Kaku Gothic ProN",sans-serif;color:var(--paper);text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);letter-spacing:.1em;font-size:.9rem}
