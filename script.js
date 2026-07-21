@@ -42,9 +42,10 @@
   (function applyVideos(){
     Object.entries(KASHU_CONFIG.videos).forEach(([key,id])=>{
       if(!id) return;
-      const box=document.querySelector('.vframe[data-embed="'+key+'"]');
+      // .vframe だけでなく、写真を置いた figure[data-embed] も動画に差し替える
+      const box=document.querySelector('[data-embed="'+key+'"]');
       if(!box) return;
-      box.classList.remove('placeholder');
+      box.className='vframe';
       box.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'" '+
         'title="加州石産 現場動画" loading="lazy" allowfullscreen '+
         'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>';
