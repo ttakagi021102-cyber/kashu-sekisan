@@ -166,6 +166,8 @@
   .co-table th{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-weight:400;letter-spacing:.14em;color:var(--gold-2);width:32%;font-size:.8rem;padding-top:21px}
   .co-table td{color:rgba(244,242,236,.9);line-height:1.9}
   .co-map{aspect-ratio:1/1;border:1px solid rgba(255,255,255,.16)}
+  .map-route{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;padding:13px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);color:rgba(244,242,236,.88);text-decoration:none;font-size:.83rem;letter-spacing:.06em;transition:.3s}
+  .map-route:hover{background:var(--gold);border-color:var(--gold);color:#241b06;font-weight:700}
   .co-map iframe{width:100%;height:100%;filter:grayscale(.3) contrast(.95);border:0}
 
   .contact{background:var(--paper);text-align:center}
