@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ttakagi021102-cyber.github.io/kashu-sekisan/sitemap.xml

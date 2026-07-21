@@ -62,8 +62,18 @@
   const mm=document.getElementById('mobileMenu');
   burger.addEventListener('click',()=>mm.classList.toggle('open'));
   mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mm.classList.remove('open')));
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  // スクロール演出。失敗しても本文が隠れたままにならないよう多重に保険をかける。
+  function revealAll(){ document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in')); }
+  try{
+    if('IntersectionObserver' in window){
+      const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+      // 保険：何らかの理由で発火しなかった場合も3秒後に必ず表示
+      setTimeout(revealAll,3000);
+    } else {
+      revealAll();   // 未対応ブラウザ
+    }
+  }catch(e){ revealAll(); }
 
   // --- お問い合わせフォーム：Googleフォーム接続 & 送信完了メッセージ ---
   (function setupForm(){

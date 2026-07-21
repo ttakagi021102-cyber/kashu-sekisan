@@ -3,6 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2b3538">
+<link rel="canonical" href="https://ttakagi021102-cyber.github.io/kashu-sekisan/">
+<!-- JSが有効な時だけスクロール演出を使う。JS無し／JSエラー時も本文が必ず表示されるようにするための印。 -->
+<script>
+document.documentElement.className+=' js';
+/* 最終保険：script.js が途中で失敗しても、4秒後に必ず全ての本文を表示する */
+window.addEventListener('load',function(){setTimeout(function(){
+  var n=document.querySelectorAll('.reveal');for(var i=0;i<n.length;i++)n[i].classList.add('in');
+},4000);});
+</script>
 <title>加州石産株式会社 | 残土処分と資材調達を、まるごと解決。</title>
 <meta name="description" content="加州石産株式会社は石川県川北町の骨材製造・残土受入業者。造園・土木・外構工事業者様へ、固定料金制の残土処分と砂利・砂・砕石の調達をワンストップでご提供。雨天・急な搬入にも断らず対応します。">
 
@@ -26,6 +36,51 @@
 <meta name="twitter:image" content="https://ttakagi021102-cyber.github.io/kashu-sekisan/images/ogp.jpg">
 
 <link rel="stylesheet" href="style.css">
+
+<!-- ===== 構造化データ：検索エンジンに会社情報を正確に伝える（Google検索での表示に影響） ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://ttakagi021102-cyber.github.io/kashu-sekisan/#business",
+  "name": "加州石産株式会社",
+  "alternateName": "株式会社砂利プラント",
+  "description": "石川県能美郡川北町の骨材製造・残土受入業者。1台ごとの固定料金制による残土処分と、砂利・砂・砕石の製造販売をワンストップで提供しています。",
+  "url": "https://ttakagi021102-cyber.github.io/kashu-sekisan/",
+  "logo": "https://ttakagi021102-cyber.github.io/kashu-sekisan/images/logo.png",
+  "image": "https://ttakagi021102-cyber.github.io/kashu-sekisan/images/ogp.jpg",
+  "telephone": "+81-76-277-1107",
+  "faxNumber": "+81-76-277-1106",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "923-1276",
+    "addressCountry": "JP",
+    "addressRegion": "石川県",
+    "addressLocality": "能美郡川北町",
+    "streetAddress": "橘字コ162"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 36.4677241, "longitude": 136.5068762 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "07:00", "closes": "17:00"
+  }],
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "石川県" },
+    { "@type": "AdministrativeArea", "name": "富山県" }
+  ],
+  "sameAs": ["https://www.instagram.com/kashusekisan/"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "取扱製品・サービス",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "建設発生土・石ガラ・大玉石・コンクリートがらの受入処分" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "砂利・砂・砕石の製造販売" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "大型・小型ダンプの貸切・手配" } }
+    ]
+  }
+}
+</script>
 </head>
 <body>
 
@@ -447,8 +502,8 @@
            設定すると自動で本番送信に切替わり、送信後に完了メッセージを表示します。
            各項目は name ではなく data-key で識別します（entry ID は JS が割り当て）。 ▼▼ -->
       <form class="kform" id="kashuForm" action="#" method="POST" target="kashuHidden">
-        <div class="frow">
-          <label>ご相談の種類 <span class="req">必須</span></label>
+        <div class="frow" role="group" aria-labelledby="lbl-category">
+          <span class="flabel" id="lbl-category">ご相談の種類 <span class="req">必須</span></span>
           <div class="radio-row">
             <label><input type="radio" data-key="CATEGORY" value="残土処分の相談" required>残土処分の相談</label>
             <label><input type="radio" data-key="CATEGORY" value="資材の調達">資材の調達</label>
@@ -458,28 +513,28 @@
           </div>
         </div>
         <div class="frow">
-          <label>会社名・屋号 <span class="opt">任意</span></label>
-          <input type="text" data-key="COMPANY" placeholder="例）〇〇建設株式会社">
+          <label for="f-company">会社名・屋号 <span class="opt">任意</span></label>
+          <input type="text" id="f-company" data-key="COMPANY" placeholder="例）〇〇建設株式会社">
         </div>
         <div class="frow">
-          <label>ご担当者名 <span class="req">必須</span></label>
-          <input type="text" data-key="NAME" placeholder="例）山田 太郎" required>
+          <label for="f-name">ご担当者名 <span class="req">必須</span></label>
+          <input type="text" id="f-name" data-key="NAME" placeholder="例）山田 太郎" required>
         </div>
         <div class="frow">
-          <label>電話番号（折り返し用） <span class="req">必須</span></label>
-          <input type="tel" data-key="TEL" placeholder="例）090-0000-0000" required>
+          <label for="f-tel">電話番号（折り返し用） <span class="req">必須</span></label>
+          <input type="tel" id="f-tel" data-key="TEL" placeholder="例）090-0000-0000" required>
         </div>
         <div class="frow">
-          <label>メールアドレス <span class="opt">任意</span></label>
-          <input type="email" data-key="EMAIL" placeholder="例）info@example.com">
+          <label for="f-email">メールアドレス <span class="opt">任意</span></label>
+          <input type="email" id="f-email" data-key="EMAIL" placeholder="例）info@example.com">
         </div>
         <div class="frow">
-          <label>搬入・納品の予定日 <span class="opt">任意</span></label>
-          <input type="date" data-key="DATE">
+          <label for="f-date">搬入・納品の予定日 <span class="opt">任意</span></label>
+          <input type="date" id="f-date" data-key="DATE">
         </div>
         <div class="frow">
-          <label>車種 <span class="opt">任意</span></label>
-          <select data-key="TRUCK">
+          <label for="f-truck">車種 <span class="opt">任意</span></label>
+          <select id="f-truck" data-key="TRUCK">
             <option value="">選択してください</option>
             <option value="2t・3t車">2t・3t車</option>
             <option value="4t車">4t車</option>
@@ -489,13 +544,14 @@
           </select>
         </div>
         <div class="frow">
-          <label>現場の所在地 <span class="opt">任意</span></label>
-          <input type="text" data-key="AREA" placeholder="例）石川県〇〇市">
+          <label for="f-area">現場の所在地 <span class="opt">任意</span></label>
+          <input type="text" id="f-area" data-key="AREA" placeholder="例）石川県〇〇市">
         </div>
         <div class="frow">
-          <label>ご相談内容 <span class="opt">任意</span></label>
-          <textarea data-key="MESSAGE" placeholder="残土の量、土の状態、ご希望の日時など、分かる範囲でご記入ください。"></textarea>
+          <label for="f-message">ご相談内容 <span class="opt">任意</span></label>
+          <textarea id="f-message" data-key="MESSAGE" placeholder="残土の量、土の状態、ご希望の日時など、分かる範囲でご記入ください。"></textarea>
         </div>
+        <p class="form-consent">ご入力いただいた内容は、お問い合わせへの回答とそれに付随する業務のみに使用します。詳しくは<a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>をご確認ください。送信をもってご同意いただいたものとみなします。</p>
         <div class="fsubmit">
           <button type="submit">送信する</button>
         </div>
@@ -546,6 +602,7 @@
         <a href="#movie">動画</a>
         <a href="#company">会社概要</a>
         <a href="#form">お問い合わせ</a>
+        <a href="privacy.html">プライバシーポリシー</a>
       </nav>
     </div>
     <div class="copy">© 2026 KASHU SEKISAN CO., LTD. All Rights Reserved.</div>
