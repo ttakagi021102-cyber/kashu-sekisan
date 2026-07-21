@@ -403,7 +403,8 @@
             <label><input type="radio" data-key="CATEGORY" value="残土処分の相談" required>残土処分の相談</label>
             <label><input type="radio" data-key="CATEGORY" value="資材の調達">資材の調達</label>
             <label><input type="radio" data-key="CATEGORY" value="ダンプ手配">ダンプ手配</label>
-            <label><input type="radio" data-key="CATEGORY" value="その他">その他</label>
+            <!-- data-other: Googleフォーム標準の「その他」欄は __other_option__ 形式での送信が必要（script.jsが変換） -->
+            <label><input type="radio" data-key="CATEGORY" value="その他" data-other="その他">その他</label>
           </div>
         </div>
         <div class="frow">

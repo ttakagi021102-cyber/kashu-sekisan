@@ -23,17 +23,17 @@
        ※ 設定すると「見本」注意書きは自動で消え、送信後に完了メッセージを表示します。
        ============================================================ */
     form: {
-      formResponseUrl: '',   // ← GoogleフォームのformResponse URLを設定
+      formResponseUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdCg4jJb2tFPUpACbkoPNi3QD3CvIMF5XuVl8Ki7uS0wnzhog/formResponse',
       entries: {
-        CATEGORY: '',        // ご相談の種類（ラジオ）
-        COMPANY:  '',        // 会社名・屋号
-        NAME:     '',        // ご担当者名
-        TEL:      '',        // 電話番号
-        EMAIL:    '',        // メールアドレス
-        DATE:     '',        // 搬入・納品の予定日
-        TRUCK:    '',        // 車種
-        AREA:     '',        // 現場の所在地
-        MESSAGE:  ''         // ご相談内容
+        CATEGORY: 'entry.786512268',    // ご相談の種類（ラジオ・必須）
+        COMPANY:  'entry.1384097456',   // 会社名・屋号
+        NAME:     'entry.1465276450',   // ご担当者名（必須）
+        TEL:      'entry.854611767',    // 電話番号（必須）
+        EMAIL:    'entry.1748101611',   // メールアドレス
+        DATE:     'entry.1768134552',   // 搬入・納品の予定日
+        TRUCK:    'entry.1847134824',   // 車種
+        AREA:     'entry.2132249407',   // 現場の所在地
+        MESSAGE:  'entry.769314318'     // ご相談内容
       }
     }
   };
@@ -97,6 +97,21 @@
         alert('このフォームは現在「見本」の状態です。\nお手数ですが、お電話（076-277-1107）にてご連絡ください。');
         return;
       }
+      // Googleフォーム標準の「その他」欄は、値をそのまま送ると弾かれる。
+      // 「__other_option__」＋別項目(.other_option_response)に本文、という形式で送る必要がある。
+      const other=form.querySelector('input[type=radio][data-other]:checked');
+      if(other && other.name){
+        const originalValue=other.value;
+        const extra=document.createElement('input');
+        extra.type='hidden';
+        extra.name=other.name+'.other_option_response';
+        extra.value=other.getAttribute('data-other')||originalValue;
+        form.appendChild(extra);
+        other.value='__other_option__';
+        // 送信データの組み立て後（次のタスク）に元へ戻す ※再送信時に壊れないように
+        setTimeout(function(){ other.value=originalValue; extra.remove(); },0);
+      }
+
       // 接続済み：隠しiframeへPOST（ページ遷移なし）。完了はiframeのloadで検知。
       submitted=true;
     });
