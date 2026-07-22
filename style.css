@@ -143,7 +143,7 @@
   /* ---------- 現場の仕事 ---------- */
   .worksite{background:var(--paper-2)}
   .work-intro{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.94rem;color:var(--ink-2);line-height:2;max-width:40em;margin-bottom:40px}
-  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
   .work-item{background:var(--white);border:1px solid var(--line);overflow:hidden;transition:.4s}
   .work-item:hover{border-color:var(--gold);transform:translateY(-3px)}
   .work-item img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;transition:transform .6s}
@@ -191,6 +191,15 @@
   .map-route{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;padding:13px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);color:rgba(244,242,236,.88);text-decoration:none;font-size:.83rem;letter-spacing:.06em;transition:.3s}
   .map-route:hover{background:var(--gold);border-color:var(--gold);color:#241b06;font-weight:700}
   .co-map iframe{width:100%;height:100%;filter:grayscale(.3) contrast(.95);border:0}
+
+  /* ---------- 連携先・協力会社 ---------- */
+  .partner-block{margin-top:60px;padding-top:48px;border-top:1px solid rgba(255,255,255,.16)}
+  .partner-h{font-size:1.24rem;font-weight:700;letter-spacing:.06em;color:var(--paper);margin-bottom:12px}
+  .partner-lead{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.92rem;color:rgba(244,242,236,.74);line-height:2;max-width:42em;margin-bottom:30px}
+  .partner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .partner-item{border:1px solid rgba(255,255,255,.16);overflow:hidden;background:rgba(255,255,255,.03)}
+  .partner-item img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+  .partner-item figcaption{font-family:"Hiragino Kaku Gothic ProN",sans-serif;padding:12px 15px;font-size:.84rem;letter-spacing:.04em;color:rgba(244,242,236,.85);border-top:1px solid rgba(255,255,255,.12)}
 
   .contact{background:var(--paper);text-align:center}
   .contact h2{font-size:clamp(1.8rem,3.8vw,2.6rem);font-weight:700;letter-spacing:.06em;margin-bottom:20px;line-height:1.6}
@@ -308,6 +317,8 @@
     .team-photo{margin-bottom:36px}
     .hero-photo{opacity:.28}
     .work-grid{grid-template-columns:1fr 1fr;gap:14px}
+    .partner-grid{grid-template-columns:1fr;gap:14px}
+    .partner-block{margin-top:40px;padding-top:34px}
     .work-item figcaption{padding:11px 12px;font-size:.75rem}
     .exec-block{grid-template-columns:1fr;gap:14px;margin-bottom:36px}
     .prod-photo{margin-bottom:16px}
