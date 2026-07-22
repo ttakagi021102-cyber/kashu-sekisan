@@ -214,7 +214,6 @@
   .foot-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1)}
   .foot-logo{height:44px;width:auto;display:block;margin-bottom:14px;opacity:.92}
   .foot-brand .mark{font-size:1.2rem;font-weight:700;letter-spacing:.12em;color:var(--paper);margin-bottom:4px}
-  .foot-brand .mark2{font-size:.9rem;color:rgba(244,242,236,.6);margin-bottom:10px}
   .foot-brand .adr{font-size:.82rem;line-height:1.9}
   .sns-link{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:inline-flex;align-items:center;gap:9px;margin-top:16px;padding:9px 17px;border:1px solid rgba(255,255,255,.22);color:rgba(244,242,236,.82);text-decoration:none;font-size:.78rem;letter-spacing:.06em;transition:.3s}
   .sns-link svg{width:16px;height:16px;fill:currentColor;flex:0 0 auto}
