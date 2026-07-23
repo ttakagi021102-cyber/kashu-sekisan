@@ -358,7 +358,7 @@
   .js .reveal.in{opacity:1;transform:translateY(0)}
 
   /* ナビ項目が9個あり、1行に収まらなくなる幅で早めにハンバーガーへ切替（レイアウト全体のモバイル化は880pxのまま） */
-  @media(max-width:1120px){
+  @media(max-width:1160px){
     .menu,.navtel{display:none}
     .burger{display:flex}
   }
