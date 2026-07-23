@@ -103,6 +103,7 @@
   .rcard .ic{font-size:1.8rem;margin-bottom:20px;color:var(--gold)}
   .rcard h3{font-size:1.24rem;font-weight:700;letter-spacing:.04em;margin-bottom:16px;line-height:1.6;position:relative;z-index:2}
   .rcard p{font-size:.93rem;color:var(--ink-2);line-height:2.05}
+  .r-scope{display:block;margin-top:12px;font-size:.78rem;color:var(--stone);letter-spacing:.02em}
 
   .compare{background:var(--paper-2)}
   .cmp-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line)}
@@ -112,6 +113,7 @@
   .cmp-table thead .them{background:var(--paper-2);color:var(--stone)}
   .cmp-table thead .item{width:22%;background:var(--white)}
   .cmp-table .rowlabel{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-weight:700;font-size:.9rem;color:var(--slate);letter-spacing:.04em;width:22%}
+  .cmp-table .rl-note{font-weight:400;font-size:.74rem;color:var(--stone)}
   .cmp-table .them-cell{color:var(--stone);width:39%}
   .cmp-table .us-cell{width:39%;background:rgba(168,132,62,.06);color:var(--ink)}
   .cmp-table .us-cell strong{color:var(--slate)}
@@ -209,6 +211,10 @@
   .rc-ic{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:rgba(168,132,62,.12);color:var(--gold);font-size:1.3rem;margin-bottom:18px}
   .rc-item h3{font-size:1.12rem;font-weight:700;letter-spacing:.04em;color:var(--slate);margin-bottom:12px;line-height:1.55}
   .rc-item p{font-size:.9rem;color:var(--ink-2);line-height:2}
+  .rc-jobs{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-bottom:38px;padding:20px 24px;background:var(--white);border:1px solid var(--line);border-left:3px solid var(--gold)}
+  .rc-jobs-label{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;color:var(--stone);flex:0 0 auto}
+  .rc-jobs-list{display:flex;flex-wrap:wrap;gap:11px}
+  .rc-jobs-list span{font-family:"Hiragino Kaku Gothic ProN",sans-serif;background:var(--paper-2);border:1px solid var(--line);padding:9px 16px;font-size:.9rem;font-weight:700;letter-spacing:.03em;color:var(--slate)}
   .recruit-cta{text-align:center;margin-top:48px}
   .recruit-cta>p{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.92rem;color:var(--ink-2);margin-bottom:14px}
   .rc-tel{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:1.9rem;font-weight:700;color:var(--slate);letter-spacing:.03em;text-decoration:none}
