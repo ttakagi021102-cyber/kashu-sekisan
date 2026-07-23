@@ -62,7 +62,7 @@
   .hero h1 .accent{color:var(--gold-2)}
   .hero p{font-size:1.02rem;max-width:36em;color:rgba(244,242,236,.84);line-height:2.1;margin-bottom:24px;opacity:0;transform:translateY(16px);animation:rise 1s .8s forwards}
   .hero .target{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.82rem;letter-spacing:.08em;color:rgba(244,242,236,.6);margin-bottom:40px;opacity:0;animation:rise 1s .9s forwards}
-  .hero .target-sub{display:block;margin-top:8px;font-size:.76rem;color:rgba(244,242,236,.45);letter-spacing:.06em}
+  .hero .target-sub{display:block;margin-top:8px;font-size:.82rem;color:rgba(244,242,236,.55);letter-spacing:.08em}
   .hero-cta{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:rise 1s 1.05s forwards}
   .btn{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:inline-flex;align-items:center;gap:10px;font-size:.86rem;letter-spacing:.12em;text-decoration:none;padding:16px 32px;transition:.35s}
   .btn-solid{background:var(--gold);color:#241b06;font-weight:700}
@@ -178,7 +178,7 @@
   .voice-card::before{content:"“";font-family:Georgia,serif;font-size:5rem;color:var(--gold);opacity:.35;position:absolute;top:20px;left:34px;line-height:1}
   .voice-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:32px;position:relative;z-index:2}
   .vstep .vn{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.68rem;letter-spacing:.24em;color:var(--gold);margin-bottom:12px;display:block}
-  .vstep h4{font-size:.98rem;font-weight:700;letter-spacing:.04em;margin-bottom:10px}
+  .vstep h3{font-size:.98rem;font-weight:700;letter-spacing:.04em;margin-bottom:10px}
   .vstep p{font-size:.86rem;color:var(--ink-2);line-height:1.95}
   .voice-quote{border-top:1px solid var(--line);padding-top:26px;font-size:1.14rem;font-weight:700;color:var(--slate);letter-spacing:.04em;line-height:1.8}
   .voice-by{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.82rem;color:var(--stone);margin-top:14px;letter-spacing:.06em}
