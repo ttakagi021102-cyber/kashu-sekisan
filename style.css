@@ -200,6 +200,21 @@
   .map-route:hover{background:var(--gold);border-color:var(--gold);color:#241b06;font-weight:700}
   .co-map iframe{width:100%;height:100%;filter:grayscale(.3) contrast(.95);border:0}
 
+  /* ---------- 採用情報 ---------- */
+  .recruit{background:var(--paper-2)}
+  .recruit-lead{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.96rem;color:var(--ink-2);line-height:2.05;max-width:44em;margin-bottom:46px}
+  .recruit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .rc-item{background:var(--white);border:1px solid var(--line);padding:34px 30px;transition:.35s}
+  .rc-item:hover{border-color:var(--gold);transform:translateY(-3px)}
+  .rc-ic{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:rgba(168,132,62,.12);color:var(--gold);font-size:1.3rem;margin-bottom:18px}
+  .rc-item h3{font-size:1.12rem;font-weight:700;letter-spacing:.04em;color:var(--slate);margin-bottom:12px;line-height:1.55}
+  .rc-item p{font-size:.9rem;color:var(--ink-2);line-height:2}
+  .recruit-cta{text-align:center;margin-top:48px}
+  .recruit-cta>p{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.92rem;color:var(--ink-2);margin-bottom:14px}
+  .rc-tel{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:1.9rem;font-weight:700;color:var(--slate);letter-spacing:.03em;text-decoration:none}
+  .rc-tel:hover{color:var(--gold)}
+  .rc-tel-sub{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:block;margin-top:10px;font-size:.84rem;color:var(--stone);letter-spacing:.04em}
+
   /* ---------- 連携先・協力会社 ---------- */
   .partner-block{margin-top:60px;padding-top:48px;border-top:1px solid rgba(255,255,255,.16)}
   .partner-h{font-size:1.24rem;font-weight:700;letter-spacing:.06em;color:var(--paper);margin-bottom:12px}
@@ -208,6 +223,9 @@
   .partner-item{border:1px solid rgba(255,255,255,.16);overflow:hidden;background:rgba(255,255,255,.03)}
   .partner-item img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
   .partner-item figcaption{font-family:"Hiragino Kaku Gothic ProN",sans-serif;padding:12px 15px;font-size:.84rem;letter-spacing:.04em;color:rgba(244,242,236,.85);border-top:1px solid rgba(255,255,255,.12)}
+  .partner-voice{margin:30px 0 0;padding:26px 30px;background:rgba(255,255,255,.04);border-left:3px solid var(--gold);position:relative}
+  .partner-voice p{font-size:.98rem;line-height:2;color:rgba(244,242,236,.9);letter-spacing:.02em;margin-bottom:12px}
+  .partner-voice cite{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-style:normal;font-size:.86rem;color:var(--gold-2);letter-spacing:.04em}
 
   .contact{background:var(--paper);text-align:center}
   .contact h2{font-size:clamp(1.8rem,3.8vw,2.6rem);font-weight:700;letter-spacing:.06em;margin-bottom:20px;line-height:1.6}
@@ -326,6 +344,10 @@
     .work-grid{grid-template-columns:1fr 1fr;gap:14px}
     .partner-grid{grid-template-columns:1fr;gap:14px}
     .partner-block{margin-top:40px;padding-top:34px}
+    .recruit-grid{grid-template-columns:1fr;gap:16px}
+    .rc-item{padding:28px 24px}
+    .rc-tel{font-size:1.6rem}
+    .partner-voice{padding:22px 22px}
     .work-item figcaption{padding:11px 12px;font-size:.75rem}
     .exec-block{grid-template-columns:1fr;gap:14px;margin-bottom:36px}
     .prod-photo{margin-bottom:16px}
