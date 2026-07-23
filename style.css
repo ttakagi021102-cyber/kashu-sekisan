@@ -141,6 +141,11 @@
   .prod-tags span:hover{border-color:var(--gold);color:var(--slate)}
   .prod-note{font-family:"Hiragino Kaku Gothic ProN",sans-serif;margin-top:40px;padding:22px 26px;background:var(--paper-2);border-left:3px solid var(--gold);font-size:.9rem;color:var(--ink-2);line-height:1.9;letter-spacing:.04em}
   .prod-sub{font-family:"Hiragino Kaku Gothic ProN",sans-serif;margin-top:16px;font-size:.86rem;color:var(--stone);line-height:1.95;letter-spacing:.03em}
+  .prod-intro{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.94rem;color:var(--ink-2);line-height:2;max-width:44em;margin-bottom:44px}
+  .prod-intro strong{color:var(--slate)}
+  .prod-price{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:flex;align-items:center;gap:12px;margin:-8px 0 20px;font-size:.95rem;font-weight:700;letter-spacing:.03em;color:var(--slate)}
+  .pp-label{flex:0 0 auto;font-size:.72rem;font-weight:700;letter-spacing:.08em;color:var(--stone);background:var(--paper-2);border:1px solid var(--line);padding:5px 12px}
+  .pp-label.pp-fixed{color:#241b06;background:var(--gold-2);border-color:var(--gold-2)}
   .prod-hero{margin-bottom:48px;border:1px solid var(--line)}
   .prod-hero img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
   .prod-hero figcaption{font-family:"Hiragino Kaku Gothic ProN",sans-serif;background:var(--white);padding:14px 20px;font-size:.84rem;letter-spacing:.04em;color:var(--stone);border-top:1px solid var(--line)}
