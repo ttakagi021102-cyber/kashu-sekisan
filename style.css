@@ -31,8 +31,8 @@
   .brand-text{display:flex;flex-direction:column}
   .brand .mark{font-size:1.28rem;font-weight:700;letter-spacing:.12em}
   .brand .sub{font-size:.6rem;letter-spacing:.3em;color:var(--stone)}
-  .menu{display:flex;gap:24px;list-style:none}
-  #recruit{scroll-margin-top:96px}   /* 採用へのジャンプ時、固定ヘッダーに隠れないよう余白 */
+  .menu{display:flex;gap:18px;list-style:none}
+  #recruit,#price{scroll-margin-top:96px}   /* アンカージャンプ時、固定ヘッダーに隠れないよう余白 */
   .menu a{font-family:"Hiragino Kaku Gothic ProN",sans-serif;text-decoration:none;color:var(--ink-2);font-size:.82rem;letter-spacing:.1em;position:relative;padding:6px 0}
   .menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .35s}
   .menu a:hover::after{width:100%}
@@ -184,6 +184,27 @@
   .vstep p{font-size:.86rem;color:var(--ink-2);line-height:1.95}
   .voice-quote{border-top:1px solid var(--line);padding-top:26px;font-size:1.14rem;font-weight:700;color:var(--slate);letter-spacing:.04em;line-height:1.8}
   .voice-by{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.82rem;color:var(--stone);margin-top:14px;letter-spacing:.06em}
+  .voice-more{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1000px;margin:36px auto 0}
+  .vcard{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--gold);padding:28px 26px 24px;display:flex;flex-direction:column}
+  .vcard p{font-size:.9rem;color:var(--ink-2);line-height:1.95;margin-bottom:16px}
+  .vcard cite{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-style:normal;font-size:.8rem;color:var(--stone);letter-spacing:.04em;margin-top:auto}
+
+  /* ---------- 料金表 ---------- */
+  .price{background:var(--paper)}
+  .price-intro{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.94rem;color:var(--ink-2);line-height:2.05;max-width:46em;margin-bottom:40px}
+  .price-cols{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+  .price-col{display:flex;flex-direction:column;gap:26px}
+  .price-block{background:var(--white);border:1px solid var(--line)}
+  .price-block h3{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:1rem;font-weight:700;letter-spacing:.04em;color:var(--paper);background:var(--slate);padding:15px 22px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .price-block-fixed h3{background:var(--gold);color:#241b06}
+  .pb-unit{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.72rem;font-weight:400;letter-spacing:.06em;opacity:.9}
+  .price-table{width:100%;border-collapse:collapse}
+  .price-table td{font-family:"Hiragino Kaku Gothic ProN",sans-serif;padding:12px 22px;border-bottom:1px solid var(--line);font-size:.92rem;color:var(--ink-2)}
+  .price-table tr:last-child td{border-bottom:none}
+  .price-table tr:nth-child(even) td{background:var(--paper-2)}
+  .price-table .pt-price{text-align:right;font-weight:700;color:var(--slate);letter-spacing:.02em;white-space:nowrap}
+  .price-foot{font-family:"Hiragino Kaku Gothic ProN",sans-serif;margin-top:30px;font-size:.84rem;color:var(--stone);line-height:1.9}
+  .price-foot a,.prod-note a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);font-weight:700}
 
   .company{background:var(--slate);color:var(--paper)}
   .company .lead h2{color:var(--paper)}
@@ -323,9 +344,12 @@
   .js .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
   .js .reveal.in{opacity:1;transform:translateY(0)}
 
-  @media(max-width:880px){
+  /* ナビ項目が9個あり、1行に収まらなくなる幅で早めにハンバーガーへ切替（レイアウト全体のモバイル化は880pxのまま） */
+  @media(max-width:1120px){
     .menu,.navtel{display:none}
     .burger{display:flex}
+  }
+  @media(max-width:880px){
     .prob-grid{grid-template-columns:1fr}
     .r-grid{grid-template-columns:1fr;gap:24px}
     .why-flow{grid-template-columns:1fr}
@@ -354,6 +378,9 @@
     .rc-item{padding:28px 24px}
     .rc-tel{font-size:1.6rem}
     .partner-voice{padding:22px 22px}
+    .price-cols{grid-template-columns:1fr;gap:22px}
+    .price-col{gap:22px}
+    .voice-more{grid-template-columns:1fr;gap:16px}
     .work-item figcaption{padding:11px 12px;font-size:.75rem}
     .exec-block{grid-template-columns:1fr;gap:14px;margin-bottom:36px}
     .prod-photo{margin-bottom:16px}
