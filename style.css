@@ -189,22 +189,22 @@
   .vcard p{font-size:.9rem;color:var(--ink-2);line-height:1.95;margin-bottom:16px}
   .vcard cite{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-style:normal;font-size:.8rem;color:var(--stone);letter-spacing:.04em;margin-top:auto}
 
-  /* ---------- 料金表 ---------- */
+  /* ---------- 料金の目安・お見積もり ---------- */
   .price{background:var(--paper)}
   .price-intro{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.94rem;color:var(--ink-2);line-height:2.05;max-width:46em;margin-bottom:40px}
-  .price-cols{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
-  .price-col{display:flex;flex-direction:column;gap:26px}
-  .price-block{background:var(--white);border:1px solid var(--line)}
-  .price-block h3{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:1rem;font-weight:700;letter-spacing:.04em;color:var(--paper);background:var(--slate);padding:15px 22px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
-  .price-block-fixed h3{background:var(--gold);color:#241b06}
-  .pb-unit{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.72rem;font-weight:400;letter-spacing:.06em;opacity:.9}
-  .price-table{width:100%;border-collapse:collapse}
-  .price-table td{font-family:"Hiragino Kaku Gothic ProN",sans-serif;padding:12px 22px;border-bottom:1px solid var(--line);font-size:.92rem;color:var(--ink-2)}
-  .price-table tr:last-child td{border-bottom:none}
-  .price-table tr:nth-child(even) td{background:var(--paper-2)}
-  .price-table .pt-price{text-align:right;font-weight:700;color:var(--slate);letter-spacing:.02em;white-space:nowrap}
-  .price-foot{font-family:"Hiragino Kaku Gothic ProN",sans-serif;margin-top:30px;font-size:.84rem;color:var(--stone);line-height:1.9}
-  .price-foot a,.prod-note a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);font-weight:700}
+  .price-intro strong{color:var(--slate)}
+  .pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .pricing-card{background:var(--white);border:1px solid var(--line);border-top:3px solid var(--line);padding:28px 30px;display:flex;flex-direction:column}
+  .pricing-card-fixed{border-top-color:var(--gold)}
+  .pc-basis{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.06em;color:var(--gold);margin-bottom:10px}
+  .pricing-card h3{font-size:1.16rem;font-weight:700;letter-spacing:.04em;color:var(--slate);margin-bottom:12px;line-height:1.5}
+  .pricing-card p{font-size:.9rem;color:var(--ink-2);line-height:1.95;margin-bottom:18px}
+  .pc-tag{font-family:"Hiragino Kaku Gothic ProN",sans-serif;align-self:flex-start;margin-top:auto;font-size:.78rem;font-weight:700;letter-spacing:.04em;color:var(--stone);background:var(--paper-2);border:1px solid var(--line);padding:7px 14px}
+  .pricing-card-fixed .pc-tag{color:#241b06;background:var(--gold-2);border-color:var(--gold-2)}
+  .price-cta{text-align:center;margin-top:44px}
+  .price-cta>p{font-family:"Hiragino Kaku Gothic ProN",sans-serif;font-size:.96rem;color:var(--ink-2);line-height:1.9;margin-bottom:16px}
+  .price-cta>p strong{color:var(--slate)}
+  .prod-note a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);font-weight:700}
 
   .company{background:var(--slate);color:var(--paper)}
   .company .lead h2{color:var(--paper)}
@@ -378,8 +378,7 @@
     .rc-item{padding:28px 24px}
     .rc-tel{font-size:1.6rem}
     .partner-voice{padding:22px 22px}
-    .price-cols{grid-template-columns:1fr;gap:22px}
-    .price-col{gap:22px}
+    .pricing-grid{grid-template-columns:1fr;gap:16px}
     .voice-more{grid-template-columns:1fr;gap:16px}
     .work-item figcaption{padding:11px 12px;font-size:.75rem}
     .exec-block{grid-template-columns:1fr;gap:14px;margin-bottom:36px}
