@@ -81,6 +81,23 @@ window.addEventListener('load',function(){setTimeout(function(){
   }
 }
 </script>
+
+<!-- ===== 構造化データ：よくある質問（Google検索でのFAQ表示に対応） ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "個人でも依頼できますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、個人のお客様も歓迎です。お庭の敷砂利、家庭菜園・畑の砂、芝生の目土、砂場用の砂、DIYで出た不要な残土など、少量でもお気軽にご相談ください。" } },
+    { "@type": "Question", "name": "雨の日や、急な搬入でも受け入れてもらえますか？", "acceptedAnswer": { "@type": "Answer", "text": "可能な限り対応します。雨天・泥濘状態の土や、当日の緊急連絡にも極力お応えしています。現場状況により応相談となる場合があります。" } },
+    { "@type": "Question", "name": "少量でも購入・処分できますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、数量の大小にかかわらず承ります。掲載以外の規格・数量についてもご相談いただけます。" } },
+    { "@type": "Question", "name": "どんな土でも受け入れてもらえますか？", "acceptedAnswer": { "@type": "Answer", "text": "建設発生土・大玉石・石ガラ・コンクリートがらなどを受け入れています。受け入れできる品目・状態には条件があるため、品物の種類と車種を事前にお伝えいただければ可否をお答えします。" } },
+    { "@type": "Question", "name": "料金はどのくらいですか？", "acceptedAnswer": { "@type": "Answer", "text": "残土等の受入は車種ごとの定額（固定料金制）、資材は重さ、ダンプ貸切は時間が基準です。車種・品目・数量・現場の状況をお伝えいただければ、費用の目安をその場でお答えします。価格はすべて税抜です。" } },
+    { "@type": "Question", "name": "対応エリアはどこまでですか？", "acceptedAnswer": { "@type": "Answer", "text": "石川県を中心に、富山県・福井県を加えた北陸3県に対応しています。" } },
+    { "@type": "Question", "name": "見積もりや相談は無料ですか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、お見積り・ご相談は無料です。お電話またはお問い合わせフォームよりお気軽にどうぞ。" } }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -97,7 +114,7 @@ window.addEventListener('load',function(){setTimeout(function(){
       <ul class="menu">
         <li><a href="#problems">お悩み</a></li>
         <li><a href="#reasons">選ばれる理由</a></li>
-        <li><a href="#why">安さの理由</a></li>
+        <li><a href="#why">固定料金の理由</a></li>
         <li><a href="#worksite">現場の仕事</a></li>
         <li><a href="#products">取扱製品</a></li>
         <li><a href="#price">料金</a></li>
@@ -114,12 +131,14 @@ window.addEventListener('load',function(){setTimeout(function(){
 <div class="mobile-menu" id="mobileMenu">
   <a href="#problems">お悩み</a>
   <a href="#reasons">選ばれる理由</a>
-  <a href="#why">安さの理由</a>
+  <a href="#why">固定料金の理由</a>
   <a href="#worksite">現場の仕事</a>
   <a href="#products">取扱製品</a>
+  <a href="#price">料金</a>
   <a href="#movie">動画</a>
   <a href="#recruit">採用</a>
   <a href="#company">会社概要</a>
+  <a href="#faq">よくあるご質問</a>
   <a href="#contact">お問い合わせ</a>
 </div>
 
@@ -281,7 +300,7 @@ window.addEventListener('load',function(){setTimeout(function(){
       <h2>固定料金が実現できる理由</h2>
       <span class="en">HOW WE KEEP IT AFFORDABLE</span>
     </div>
-    <p class="why-intro reveal">当社の安さには、明確な理由があります。本業である骨材の自社採掘・製造と、残土を自社で活かす循環型の仕組みが、他社にはない固定料金を支えています。</p>
+    <p class="why-intro reveal">当社の固定料金には、明確な理由があります。本業である骨材の自社採掘・製造と、残土を自社で活かす循環型の仕組みが、他社にはない読みやすい料金を支えています。</p>
     <div class="why-flow reveal">
       <div class="wstep">
         <div class="wphoto"><img src="images/step-01.jpg" alt="自社の骨材製造プラント（空撮）" loading="lazy" width="760" height="428"></div>
@@ -661,6 +680,46 @@ window.addEventListener('load',function(){setTimeout(function(){
   </div>
 </section>
 
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="lead center reveal">
+      <span class="num">12</span>
+      <h2>よくあるご質問</h2>
+      <span class="en">FAQ</span>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>個人でも依頼できますか？</summary>
+        <div class="faq-a"><p>はい、個人のお客様も歓迎です。お庭の敷砂利、家庭菜園・畑の砂、芝生の目土、砂場用の砂、DIYで出た不要な残土など、少量でもお気軽にご相談ください。種類や量のご相談にも対応します。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>雨の日や、急な搬入でも受け入れてもらえますか？</summary>
+        <div class="faq-a"><p>可能な限り対応します。雨天・泥濘状態の土や、当日の緊急連絡にも極力お応えしています。工期の変更などでお急ぎの際も、まずはお電話でご相談ください（現場状況により応相談となる場合があります）。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>少量でも購入・処分できますか？</summary>
+        <div class="faq-a"><p>はい、数量の大小にかかわらず承ります。掲載以外の規格・数量についてもご相談いただけますので、ご希望の内容をお聞かせください。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>どんな土でも受け入れてもらえますか？</summary>
+        <div class="faq-a"><p>建設発生土・大玉石・石ガラ・コンクリートがらなどを受け入れています。受け入れできる品目・状態には条件があるため、事前に「品物の種類」と「車種」をお伝えいただければ、可否をお答えします。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>料金はどのくらいですか？</summary>
+        <div class="faq-a"><p>残土等の受入は車種ごとの定額（1台いくらが事前に確定する固定料金制）、資材は重さ、ダンプ貸切は時間が基準です。車種・品目・数量・現場の状況をお伝えいただければ、費用の目安をその場でお答えします。価格はすべて税抜（消費税別）です。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>対応エリアはどこまでですか？</summary>
+        <div class="faq-a"><p>石川県を中心に、富山県・福井県を加えた北陸3県に対応しています。エリア外でもまずはご相談ください。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>見積もりや相談は無料ですか？</summary>
+        <div class="faq-a"><p>はい、お見積り・ご相談は無料です。お電話（076-277-1107）またはお問い合わせフォームより、お気軽にお問い合わせください。</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="reveal">
@@ -691,7 +750,7 @@ window.addEventListener('load',function(){setTimeout(function(){
 <section class="form" id="form">
   <div class="wrap">
     <div class="lead center reveal">
-      <span class="num">12</span>
+      <span class="num">13</span>
       <h2>フォームでのお問い合わせ</h2>
       <span class="en">CONTACT FORM</span>
     </div>
@@ -801,11 +860,14 @@ window.addEventListener('load',function(){setTimeout(function(){
       <nav class="foot-nav">
         <a href="#problems">お悩み</a>
         <a href="#reasons">選ばれる理由</a>
-        <a href="#why">安さの理由</a>
+        <a href="#why">固定料金の理由</a>
         <a href="#worksite">現場の仕事</a>
         <a href="#products">取扱製品</a>
+        <a href="#price">料金</a>
         <a href="#movie">動画</a>
+        <a href="#recruit">採用</a>
         <a href="#company">会社概要</a>
+        <a href="#faq">よくあるご質問</a>
         <a href="#form">お問い合わせ</a>
         <a href="privacy.html">プライバシーポリシー</a>
       </nav>
