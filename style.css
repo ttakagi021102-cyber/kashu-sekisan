@@ -81,7 +81,14 @@
   .lead.center{text-align:center}
   /* 見出し内の改行：広い画面では改行なし（1行）、狭い画面でだけ意味の切れ目で改行 */
   .sp-br{display:none}
-  @media(max-width:560px){ .sp-br{display:inline} }
+  @media(max-width:560px){
+    .sp-br{display:inline}
+    /* 文字間隔が広く、スマホ幅で1文字だけ折り返してしまうのを防ぐ */
+    .eyebrow{font-size:.78rem;letter-spacing:.2em}
+    /* 比較表の行ラベルは列幅が狭く、補足が数文字ずつ縦に潰れるため非表示
+       （残土等の受入である旨は、選ばれる理由・料金・取扱製品の各所に明記済み） */
+    .cmp-table .rl-note{display:none}
+  }
 
   .problems{background:var(--slate);color:var(--paper)}
   .problems .lead h2{color:var(--paper)}
