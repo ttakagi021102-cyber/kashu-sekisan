@@ -81,6 +81,9 @@
   .hv-thumbs figure{overflow:hidden;border:1px solid rgba(244,242,236,.16);transition:.35s}
   .hv-thumbs figure:hover{border-color:var(--gold);transform:translateY(-3px)}
   .hv-thumbs img{width:100%;height:auto;display:block;aspect-ratio:16/10;object-fit:cover}
+  /* 設備の使い込まれた姿を「60年動かし続けてきた証」として意味づけるキャプション */
+  .hero .hv-caption{font-family:"Hiragino Kaku Gothic ProN",sans-serif;margin:14px 0 0;padding-left:13px;border-left:2px solid var(--gold);font-size:.87rem;line-height:1.8;color:rgba(244,242,236,.72);letter-spacing:.02em;max-width:none}
+  .hero .hv-caption strong{display:block;color:rgba(244,242,236,.95);font-weight:700}
   .hero-cta{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:rise 1s 1.05s forwards}
   .btn{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:inline-flex;align-items:center;gap:10px;font-size:.96rem;letter-spacing:.12em;text-decoration:none;padding:16px 32px;transition:.35s}
   .btn-solid{background:var(--gold);color:#241b06;font-weight:700}
