@@ -77,8 +77,10 @@
   .hv-sp{display:none}
   .hv-main{position:relative;overflow:hidden;border:1px solid rgba(244,242,236,.2);box-shadow:0 26px 60px rgba(0,0,0,.5)}
   .hv-main img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover}
-  .hv-sub{position:absolute;right:-14px;bottom:-40px;width:46%;overflow:hidden;border:5px solid #1e2628;box-shadow:0 18px 40px rgba(0,0,0,.55)}
-  .hv-sub img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover}
+  .hv-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+  .hv-thumbs figure{overflow:hidden;border:1px solid rgba(244,242,236,.16);transition:.35s}
+  .hv-thumbs figure:hover{border-color:var(--gold);transform:translateY(-3px)}
+  .hv-thumbs img{width:100%;height:auto;display:block;aspect-ratio:16/10;object-fit:cover}
   .hero-cta{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:rise 1s 1.05s forwards}
   .btn{font-family:"Hiragino Kaku Gothic ProN",sans-serif;display:inline-flex;align-items:center;gap:10px;font-size:.96rem;letter-spacing:.12em;text-decoration:none;padding:16px 32px;transition:.35s}
   .btn-solid{background:var(--gold);color:#241b06;font-weight:700}
@@ -411,7 +413,8 @@
     .hero-body{grid-template-columns:1fr;gap:0;margin-top:22px}
     .hv-pc{display:none}
     .hv-sp{display:block;margin:0 0 32px}
-    .hv-sp img{width:100%;height:auto;display:block;aspect-ratio:16/10;object-fit:cover;border:1px solid rgba(244,242,236,.2)}
+    .hv-sp .hv-main img{aspect-ratio:16/10}
+    .hv-sp .hv-thumbs{gap:8px;margin-top:8px}
     .hero-points li{font-size:1rem;padding-left:24px;margin-bottom:11px}
     .hero-points{margin-bottom:26px}
     .work-grid{grid-template-columns:1fr 1fr;gap:14px}
